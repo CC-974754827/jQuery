@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+        button{
+            background: #000;
+            color: #FFffff;
+            border: 0;
+            cursor: pointer;
+        }
+        textarea{
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+    <button id="big">放大</button>
+    <button id="small">缩小</button>
+    <div>
+        <textarea>qqqqqqqqqqqqqqqqqqqqqqqqq</textarea>
+    </div>
+    <script src="jquery-1.12.4.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $('#big').on('click',function(){
+                $('textarea').animate({ height:'+=50'});
+            });
+            $('#small').on('click',function(){
+                $('textarea').animate({height:'-=50'});
+            });
+        });
+
+    </script>
+</body>
+</html>

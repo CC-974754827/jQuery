@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+</head>
+    <body>
+        <h2>你的爱好是？</h2>
+        <input type="checkbox" name="hobby" checked="checked"/>足球
+        <input type="checkbox" name="hobby"/>篮球
+        <input type="checkbox" name="hobby"/>排球
+        <br/>
+        <button id="all">全选</button>
+        <button id="no">全不选</button>
+        <button id="re">反选</button>
+    </body>
+
+    <script src="jquery-1.12.4.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $('#all').on('click',function(){
+                $('input[name = "hobby"]').prop('checked','checked');
+            });
+            $('#no').on('click',function(){
+                $('input[name = "hobby"]').removeProp('checked');
+            });
+            $('#re').on('click',function(){
+                $('input[name = "hobby"]').each(function(index,elem){
+                    this.checked = !this.checked;
+                });
+            });
+        });
+    </script>
+</html>
